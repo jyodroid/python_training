@@ -40,6 +40,9 @@ for development on ***atom editor***:
 + *hello_word* - simple hello word
 + *rename_files* - using the OS rename files in a folder
 + *words_count* - Use of hash, sorting collections and lists
++ *check_profanity* - read from a file, consume API.
++ *reduce_array* - use the standard library fuction `reduce` to reduce arrays to single value
++ *entertainment_center* - class construction and instance, utf-8 codification, `webbrowser` library use
 
 ###### Turtle class samples  
 + *phycocircus* - create a circle with squares
@@ -48,6 +51,8 @@ for development on ***atom editor***:
 
 ### Useful links
 [Google python class] - free class for people with a little bit of programming experience who want to learn Python. in this repo are included the exercises of the course.
+
+[Udacity Programming Foundations with Python] - Introductory programming class to learn Object-Oriented Programming, a must-have technique to reuse and share code easily. Learn by making projects that spread happiness…
 
 License
 ----
@@ -63,4 +68,5 @@ MIT
    [Python]: <https://www.python.org/>
    [linter]: <https://atom.io/packages/linter>
    [Google python class]: <https://developers.google.com/edu/python/>
+   [Udacity Programming Foundations with Python]: <https://classroom.udacity.com/courses/ud036>
    [Fedora]: <https://getfedora.org/>
