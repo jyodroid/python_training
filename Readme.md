@@ -43,6 +43,7 @@ for development on ***atom editor***:
 + *check_profanity* - read from a file, consume API.
 + *reduce_array* - use the standard library fuction `reduce` to reduce arrays to single value
 + *entertainment_center* - class construction and instance, utf-8 codification, `webbrowser` library use
++ *inheritance* - POO Inheritance concepts and applications
 
 ###### Turtle class samples  
 + *phycocircus* - create a circle with squares

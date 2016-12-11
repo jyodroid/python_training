@@ -31,3 +31,4 @@ avatar = media.Movie(
 # avatar.show_trailer()
 movies = [toy_story, avatar]
 fresh_tomatoes.open_movies_page(movies)
+# print media.Movie.__doc__
