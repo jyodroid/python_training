@@ -50,10 +50,20 @@ for development on ***atom editor***:
 + *mindstorms* - basic figures
 + *flower* - a rose like figure
 
+#### Google Python exercises
++ *hello* - Main class, system arguments, array splice, string trim.
++ *string1* - Basic string operations as substrings and replace.
+
 ### Useful links
 [Google python class] - free class for people with a little bit of programming experience who want to learn Python. in this repo are included the exercises of the course.
 
 [Udacity Programming Foundations with Python] - Introductory programming class to learn Object-Oriented Programming, a must-have technique to reuse and share code easily. Learn by making projects that spread happiness…
+
+[Coursera An introduction to Interactive Programming in Python] - This two-part course is designed to help students with very little or no computing background learn the basics of building simple interactive applications.
+
+[Python books] - A Python Reading List by Wesley Chun.
+
+[Python official documentation] - Official documentation for both versions.
 
 License
 ----
@@ -71,3 +81,6 @@ MIT
    [Google python class]: <https://developers.google.com/edu/python/>
    [Udacity Programming Foundations with Python]: <https://classroom.udacity.com/courses/ud036>
    [Fedora]: <https://getfedora.org/>
+   [Coursera An introduction to Interactive Programming in Python]: <https://www.coursera.org/learn/interactive-python-1>
+   [Python books] : <http://www.informit.com/articles/article.aspx?p=1849069>
+   [Python official documentation]: <https://docs.python.org>

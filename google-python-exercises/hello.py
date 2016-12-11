@@ -18,17 +18,33 @@ and run Python code; now you just need to learn Python!
 """
 
 import sys
+# dir(sys) or help(sys) will show the methods on sys module
+
+
+def buildName(nameArr):
+    name = ''
+    for namePart in nameArr:
+        name = name + namePart + ' '
+    return name.strip()
+
+
+def hello(name):
+    if name == 'Alice' or name == 'Nick':
+        name = name + '???'
+    else:
+        name = name + '!!!!!'
+    print 'Hello', name
 
 
 # Define a main() function that prints a little greeting.
 def main():
     # Get the name from the command line, using 'World' as a fallback.
     if len(sys.argv) >= 2:
-        name = sys.argv[1]
+        name = buildName(sys.argv[1:len(sys.argv)])
     else:
-        name = 'World'
-        print 'Hello', name
+        name = "World's people"  # double quotes
+    hello(name)
 
-        # This is the standard boilerplate that calls the main() function.
-        if __name__ == '__main__':
-            main()
+# This is the standard boilerplate that calls the main() function.
+if __name__ == '__main__':
+    main()
