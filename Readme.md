@@ -35,6 +35,24 @@ for development on ***atom editor***:
 + Install autocomplete for phyton `apm install autocomplete-python`
 + run examples with `python example_name.py`
 
+### Create an executable from a python script
+
+To create a standalone executable from a python script we use [Pyinstaller]
+
+in the Pyinstaller downloaded folder we need to run:
+
+```
+python pyinstaller.py <route to script> --windowed -F
+```
+
+Pyinstaller will create an executable for the current SO. In Linux to create a Windows executable we can use ***wine*** with python installed and run
+
+```
+wine python pyinstaller.py <route to script> --windowed -F
+```  
+
+The executable will be generated on the ***script-name/dist*** folder of Pyinstaller downloaded folder
+
 ### List of exercises
 
 + *hello_word* - simple hello word
@@ -82,5 +100,6 @@ MIT
    [Udacity Programming Foundations with Python]: <https://classroom.udacity.com/courses/ud036>
    [Fedora]: <https://getfedora.org/>
    [Coursera An introduction to Interactive Programming in Python]: <https://www.coursera.org/learn/interactive-python-1>
-   [Python books] : <http://www.informit.com/articles/article.aspx?p=1849069>
+   [Python books]: <http://www.informit.com/articles/article.aspx?p=1849069>
    [Python official documentation]: <https://docs.python.org>
+   [Pyinstaller]: <http://www.pyinstaller.org/>
