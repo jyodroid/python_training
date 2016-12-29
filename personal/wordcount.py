@@ -17,6 +17,7 @@ def count_words(words, top):
     top_n = sorted_words_count[:top]
     return top_n
 
+
 def test_run():
     print count_words("cat bat mat cat bat cat", 3)
     print count_words(

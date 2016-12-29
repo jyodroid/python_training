@@ -55,13 +55,19 @@ The executable will be generated on the ***script-name/dist*** folder of Pyinsta
 
 ### List of exercises
 
+#### Personal exercises
 + *hello_word* - simple hello word
 + *rename_files* - using the OS rename files in a folder
 + *words_count* - Use of hash, sorting collections and lists
 + *check_profanity* - read from a file, consume API.
 + *reduce_array* - use the standard library fuction `reduce` to reduce arrays to single value
 + *entertainment_center* - class construction and instance, utf-8 codification, `webbrowser` library use
-+ *inheritance* - POO Inheritance concepts and applications
++ *inheritance* - POO Inheritance concepts and applications.
++ *strings* - string operations.
++ *tuples* - tuples few operations.
++ *dictionary* - hash map operations and file manipulation.
++ *list* - list examples of several operations including sorting, iteration and modification.
++ *prime* - defines whether a number is prime or not.
 
 ###### Turtle class samples  
 + *phycocircus* - create a circle with squares
@@ -71,6 +77,10 @@ The executable will be generated on the ***script-name/dist*** folder of Pyinsta
 #### Google Python exercises
 + *hello* - Main class, system arguments, array splice, string trim.
 + *string1* - Basic string operations as substrings and replace.
++ *string2* - Basic string operations as substrings, find and replace.
++ *list1* - Basic list operations as iteration, sorting and tuples.
++ *list2* - Basic list operations as list merge, list append and list pop and use of reversed() operation.
++ *wordcount* - using dictionary count the frequency of a word in a text.
 
 ### Useful links
 [Google python class] - free class for people with a little bit of programming experience who want to learn Python. in this repo are included the exercises of the course.

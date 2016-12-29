@@ -12,18 +12,47 @@
 # all adjacent == elements have been reduced to a single element,
 # so [1, 2, 2, 3] returns [1, 2, 3]. You may create a new list or
 # modify the passed in list.
+
+
+# def remove_adjacent(nums):
+#     # +++your code here+++
+#     index = 0
+#     for num in nums:
+#         if nums.pop(index) not in nums:
+#             nums.append(num)
+#         index += 1
+#     return sorted(nums)
+
 def remove_adjacent(nums):
-  # +++your code here+++
-  return
+    # +++your code here+++
+    nums = sorted(nums)
+    for num in nums:
+        if num in nums[nums.index(num) + 1:]:
+            nums.pop(nums.index(num))
+    return nums
 
 
 # E. Given two lists sorted in increasing order, create and return a merged
 # list of all the elements in sorted order. You may modify the passed in lists.
 # Ideally, the solution should work in "linear" time, making a single
 # pass of both lists.
+# def linear_merge(list1, list2):
+#         # +++your code here+++
+#     return sorted(list1 + list2)
+
 def linear_merge(list1, list2):
-  # +++your code here+++
-  return
+        # +++your code here+++
+    result = []
+    while len(list1) and len(list2):
+        if list1[-1] > list2[-1]:
+            result.append(list1.pop(-1))
+        else:
+            result.append(list2.pop(-1))
+
+    result.extend(list1)
+    result.extend(list2)
+
+    return list(reversed(result))
 
 # Note: the solution above is kind of cute, but unforunately list.pop(0)
 # is not constant time with the standard python list implementation, so
@@ -37,29 +66,29 @@ def linear_merge(list1, list2):
 # Simple provided test() function used in main() to print
 # what each function returns vs. what it's supposed to return.
 def test(got, expected):
-  if got == expected:
-    prefix = ' OK '
-  else:
-    prefix = '  X '
-  print '%s got: %s expected: %s' % (prefix, repr(got), repr(expected))
+    if got == expected:
+        prefix = ' OK '
+    else:
+        prefix = '  X '
+    print '%s got: %s expected: %s' % (prefix, repr(got), repr(expected))
 
 
 # Calls the above functions with interesting inputs.
 def main():
-  print 'remove_adjacent'
-  test(remove_adjacent([1, 2, 2, 3]), [1, 2, 3])
-  test(remove_adjacent([2, 2, 3, 3, 3]), [2, 3])
-  test(remove_adjacent([]), [])
+    print 'remove_adjacent'
+    test(remove_adjacent([1, 2, 2, 3]), [1, 2, 3])
+    test(remove_adjacent([2, 2, 3, 3, 3]), [2, 3])
+    test(remove_adjacent([]), [])
 
-  print
-  print 'linear_merge'
-  test(linear_merge(['aa', 'xx', 'zz'], ['bb', 'cc']),
-       ['aa', 'bb', 'cc', 'xx', 'zz'])
-  test(linear_merge(['aa', 'xx'], ['bb', 'cc', 'zz']),
-       ['aa', 'bb', 'cc', 'xx', 'zz'])
-  test(linear_merge(['aa', 'aa'], ['aa', 'bb', 'bb']),
-       ['aa', 'aa', 'aa', 'bb', 'bb'])
+    print
+    print 'linear_merge'
+    test(linear_merge(['aa', 'xx', 'zz'], ['bb', 'cc']),
+         ['aa', 'bb', 'cc', 'xx', 'zz'])
+    test(linear_merge(['aa', 'xx'], ['bb', 'cc', 'zz']),
+         ['aa', 'bb', 'cc', 'xx', 'zz'])
+    test(linear_merge(['aa', 'aa'], ['aa', 'bb', 'bb']),
+         ['aa', 'aa', 'aa', 'bb', 'bb'])
 
 
 if __name__ == '__main__':
-  main()
+    main()
