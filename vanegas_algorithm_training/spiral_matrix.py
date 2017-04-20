@@ -1,5 +1,4 @@
 import sys
-# Problem with matrix with more columns that rows
 def spiral_matrix(dummy_matrix):
 
     if len(dummy_matrix) == 0:
@@ -48,6 +47,8 @@ def go_back_range(start, end):
 # sig_file: toma un archivo con texto y firma digitalmente el texto
 # @autor: John Jairo Tangarife Abril 6 del 2017
 def main():
+    spiral_matrix([[1,2,3],[11,12,13]])
+    print
     spiral_matrix([[1,2,3],[11,12,13],[21,22,23],[31,32,33]])
     print
     spiral_matrix([[1,2,3],[8,9,4],[7,6,5]])
