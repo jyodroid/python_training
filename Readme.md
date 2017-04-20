@@ -35,6 +35,8 @@ for development on ***atom editor***:
 + Install autocomplete for phyton `apm install autocomplete-python`
 + run examples with `python example_name.py`
 
+You also should install manually pip with `python get-pip.py`
+
 ### Create an executable from a python script
 
 To create a standalone executable from a python script we use [Pyinstaller]
