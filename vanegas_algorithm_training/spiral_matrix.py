@@ -1,9 +1,9 @@
 import sys
 def spiral_matrix(dummy_matrix):
 
-    listSpiral = []
+    list_spiral = []
     if len(dummy_matrix) == 0:
-        return listSpiral
+        return list_spiral
 
     col_ini = 0
     col_end = len(dummy_matrix[0])
@@ -11,26 +11,31 @@ def spiral_matrix(dummy_matrix):
     row_ini = 0
     row_end = len(dummy_matrix)
 
+    max_elements = col_end * row_end
+
     while ((row_ini < row_end) and (col_ini < col_end)):
         # Run from start top from left to rigth
         for top in range(col_ini, col_end):
-            listSpiral.append(dummy_matrix[row_ini][top])
+            list_spiral.append(dummy_matrix[row_ini][top])
 
         # When reach right start from top to bottom
         # First to print is last printed in last step so avoid to print it (start from row_ini + 1)
+        if max_elements == len(list_spiral): break
         for rigth in range(row_ini + 1, row_end):
-            listSpiral.append(dummy_matrix[rigth][col_end-1])
+            list_spiral.append(dummy_matrix[rigth][col_end-1])
 
         # When reach bottom go from right to left
         # First to print is last printed in last step so avoid to print it (start from col_end - 1)
+        if max_elements == len(list_spiral): break
         for bottom in go_back_range(col_end - 1, col_ini):
-            listSpiral.append(dummy_matrix[row_end - 1][bottom - 1])
+            list_spiral.append(dummy_matrix[row_end - 1][bottom - 1])
 
         # When reach left go to top again
         # First to print is last printed in last step so avoid to print it (start from row_end - 1)
         # Last to print is first printed in top step so avoid to print it (end in row_ini + 1)
+        if max_elements == len(list_spiral): break
         for left in go_back_range(row_end - 1, row_ini + 1):
-            listSpiral.append(dummy_matrix[left - 1][col_ini])
+            list_spiral.append(dummy_matrix[left - 1][col_ini])
 
         # Reduce the matrix borders
         row_ini += 1
@@ -38,7 +43,7 @@ def spiral_matrix(dummy_matrix):
         col_ini += 1
         col_end -= 1
 
-    return listSpiral
+    return list_spiral
 
 # Helper go back method
 def go_back_range(start, end):
