@@ -1,4 +1,3 @@
-import sys
 def spiral_matrix(dummy_matrix):
 
     list_spiral = []
