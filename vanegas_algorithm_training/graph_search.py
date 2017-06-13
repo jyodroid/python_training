@@ -77,7 +77,7 @@ def find_shortest_path_BFS(graph, beginWord, endWord):
         if endWord in queue:
             return distance[endWord]
 
-        currentNode = queue.pop()
+        currentNode = queue.pop(0)
         for node in graph[currentNode]:
             if (auxiliar[node] == UNVISITED):
                 auxiliar[node] = VISITED
