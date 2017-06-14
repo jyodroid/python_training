@@ -37,6 +37,22 @@ for development on ***atom editor***:
 
 You also should install manually pip with `python get-pip.py`
 
+### Using Anaconda
+
+Anaconda is a distribution of software and libraries and uses *CONDA* (a package and environment manager) to manage versions and sandbox the environment needed for a python project including python version
+
++ Download [Anaconda] or
++ Use `wget https://repo.continuum.io/archive/Anaconda3-4.4.0-MacOSX-x86_64.sh`
++ Open a new terminal so you can use the `conda` command
++ Create the environment for an application with `conda create -n <app_name> python=<python_number(2 or 3)>`
++ Activate the environment for the application `source activate <app_name>`
++ Use `conda list` to see the installed libraries and versions for the environment
++ To install new packages or libs on the environment `conda install <dep1> <dep2> ...`
++ It's possible to use a text document to export a project requirements ``
++ To upgrade conda `conda upgrade conda`
++ To upgrade all packages `conda upgrade --all`
+
+
 ### Create an executable from a python script
 
 To create a standalone executable from a python script we use [Pyinstaller]
@@ -98,13 +114,33 @@ The executable will be generated on the ***script-name/dist*** folder of Pyinsta
 License
 ----
 
-MIT
+MIT License
 
+Copyright (c) 2016 John Tangarife
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 
 **Free Software, Hell Yeah!**
 
 [//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
 
+   [Anaconda]: <https://www.continuum.io/downloads>
    [Atom Editor]: <https://atom.io/>
    [Python]: <https://www.python.org/>
    [linter]: <https://atom.io/packages/linter>
