@@ -44,14 +44,25 @@ Anaconda is a distribution of software and libraries and uses *CONDA* (a package
 + Download [Anaconda] or
 + Use `wget https://repo.continuum.io/archive/Anaconda3-4.4.0-MacOSX-x86_64.sh`
 + Open a new terminal so you can use the `conda` command
-+ Create the environment for an application with `conda create -n <app_name> python=<python_number(2 or 3)>`
-+ Activate the environment for the application `source activate <app_name>`
++ Create the environment for an application with `conda create -n <env_name> python=<python_version> <package1> <package2> ...`
++ Activate the environment for the application `source activate <env_name>`
++ To leave an environment use `source deactivate`
 + Use `conda list` to see the installed libraries and versions for the environment
 + To install new packages or libs on the environment `conda install <dep1> <dep2> ...`
-+ It's possible to use a text document to export a project requirements ``
++ Is possible to install a specific version of package with `conda install <package_name>=<version>`
++ To uninstall a package you can use `conda uninstall <package_name>`
++ To update a package you can use `conda update <package_name>` or `conda update --all` to update all packages
++ For searching a package use `conda search <search_term>`
++ To see environment names use `conda info --envs` or `conda env list`
++ It's possible to use a [YAML] filet export a project requirements:
+  + Enter to an environment with `source activate <env_name>`
+  + Export environment configuration with `conda env export > <file_name>.yaml`
+  + To import environment `conda env create -f <file_name>.yaml`
++ To remove environment use `conda env remove -n env_name`
 + To upgrade conda `conda upgrade conda`
-+ To upgrade all packages `conda upgrade --all`
++ To upgrade all packages `conda upgrade --all`. This command upgrades the *conda* too
 
+### [The Jupyter Notebook]
 
 ### Create an executable from a python script
 
@@ -151,3 +162,5 @@ SOFTWARE.
    [Python books]: <http://www.informit.com/articles/article.aspx?p=1849069>
    [Python official documentation]: <https://docs.python.org>
    [Pyinstaller]: <http://www.pyinstaller.org/>
+   [YAML]: <http://www.yaml.org/>
+   [The Jupyter Notebook]: <http://jupyter.org/>
