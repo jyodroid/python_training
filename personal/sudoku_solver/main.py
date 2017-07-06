@@ -27,7 +27,7 @@ def main():
     # Constraints propagation https://youtu.be/aSYDBcbvC5Y
     print("-- Normal: Solved --")
     print("##############################")
-    solver.display(solver.reduce_puzze(all_choises_board), ROWS, COLUMNS)
+    solver.display(solver.reduce_puzzle(all_choises_board), ROWS, COLUMNS)
 
     all_choises_board_hard = solver.grid_all_posibilities(GRID_VALUES_HARD)
 
@@ -39,7 +39,12 @@ def main():
     # Reduce does not work anymore with eleminate and only choise technique
     print("-- Hard: Unsolved but reduced --")
     print("##############################")
-    solver.display(solver.reduce_puzze(all_choises_board_hard), ROWS, COLUMNS)
+    solver.display(solver.reduce_puzzle(all_choises_board_hard), ROWS, COLUMNS)
+
+    # Hard using DFS
+    print("-- Hard: DFS --")
+    print("##############################")
+    solver.display(solver.search(all_choises_board_hard), ROWS, COLUMNS)
 
 def cross(a, b):
     return [s+t for s in a for t in b]

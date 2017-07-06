@@ -65,7 +65,7 @@ class SudokuSolver:
         return values
 
     # Constraints propagation on solving puzzle
-    def reduce_puzze(self, values):
+    def reduce_puzzle(self, values):
         stalled = False
         while not stalled:
             # Check how many boxes have a determined value
@@ -88,6 +88,27 @@ class SudokuSolver:
                 return False
 
         return values
+
+    # search strategy https://youtu.be/omveZu2gRLs
+    def search(self, values):
+    # "Using depth-first search and propagation, create a search tree and solve the sudoku."
+    # First, reduce the puzzle using the previous function
+        values = self.reduce_puzzle(values)
+        if values is False:
+            return False #Error propagation
+        if all(len(values[s]) == 1 for s in self.boxes):
+            return values # Solved
+
+        # Choose one of the unfilled squares with the fewest possibilities
+        n, s = min((len(values[s]), s) for s in self.boxes if len(values[s]) > 1)
+
+        # Now use recursion to solve each one of the resulting sudokus, and if one returns a value (not False), return that answer!
+        for value in values[s]:
+            new_sudoku = values.copy()
+            new_sudoku[s] = value
+            attempt = self.search(new_sudoku)
+            if attempt:
+                return attempt
 
     def display(self, values, rows, columns):
 
