@@ -111,6 +111,8 @@ The executable will be generated on the ***script-name/dist*** folder of Pyinsta
 + *list2* - Basic list operations as list merge, list append and list pop and use of reversed() operation.
 + *wordcount* - using dictionary count the frequency of a word in a text.
 
+### [PyCharm] by Jet Brains®
+
 ### Useful links
 [Google python class] - free class for people with a little bit of programming experience who want to learn Python. in this repo are included the exercises of the course.
 
@@ -164,3 +166,4 @@ SOFTWARE.
    [Pyinstaller]: <http://www.pyinstaller.org/>
    [YAML]: <http://www.yaml.org/>
    [The Jupyter Notebook]: <http://jupyter.org/>
+   [PyCharm]: <http://www.jetbrains.com/pycharm/?utm_source=learnpythonorg&utm_medium=Banner&utm_campaign=PyCharm>
