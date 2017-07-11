@@ -37,7 +37,7 @@ for development on ***atom editor***:
 
 You also should install manually pip with `python get-pip.py`
 
-### Using Anaconda
+#### Using Anaconda
 
 Anaconda is a distribution of software and libraries and uses *CONDA* (a package and environment manager) to manage versions and sandbox the environment needed for a python project including python version
 
@@ -61,6 +61,21 @@ Anaconda is a distribution of software and libraries and uses *CONDA* (a package
 + To remove environment use `conda env remove -n env_name`
 + To upgrade conda `conda upgrade conda`
 + To upgrade all packages `conda upgrade --all`. This command upgrades the *conda* too
+
+#### [django]
+
++ Install `conda install django` (ver 1.11 requires python 3.4 and up)
++ Check version `$ python -m django --version` or from python `>>> import django` and then `>>> print(django.get_version())`
++ project creation `django-admin startproject <project name>`
++ To run develpment server, go to project directory and run `python manage.py runserver`
++ To create an app for the project `python manage.py startapp <appName>`
++ To do migration for specific application `python manage.py makemigrations <appName>` afted add to projects "_INSTALLED_APPS_"
++ Execute migration `python manage.py sqlmigrate <appName> <version>`
++ Create user `python manage.py createsuperuser`
+
+##### django Rest framework
+
++ install `pip install djangorestframework`
 
 ### [The Jupyter Notebook]
 
@@ -167,3 +182,4 @@ SOFTWARE.
    [YAML]: <http://www.yaml.org/>
    [The Jupyter Notebook]: <http://jupyter.org/>
    [PyCharm]: <http://www.jetbrains.com/pycharm/?utm_source=learnpythonorg&utm_medium=Banner&utm_campaign=PyCharm>
+   [django]: <https://www.djangoproject.com/>

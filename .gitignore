@@ -1,3 +1,4 @@
 /udacity/prank/*
 *.pyc
 fresh_tomatoes.html
+__pycache__
