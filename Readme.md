@@ -73,9 +73,11 @@ Anaconda is a distribution of software and libraries and uses *CONDA* (a package
 + Execute migration `python manage.py sqlmigrate <appName> <version>`
 + Create user `python manage.py createsuperuser`
 
-##### django Rest framework
+##### [django rest_framework]
 
 + install `pip install djangorestframework`
++ install *httpie* `brew install httpie`
++ test REST api `http -a <user-name>:<password> http://<127.0.0.1 or localhost>:<port>/<endpoint>/`
 
 ### [The Jupyter Notebook]
 
@@ -183,3 +185,4 @@ SOFTWARE.
    [The Jupyter Notebook]: <http://jupyter.org/>
    [PyCharm]: <http://www.jetbrains.com/pycharm/?utm_source=learnpythonorg&utm_medium=Banner&utm_campaign=PyCharm>
    [django]: <https://www.djangoproject.com/>
+   [django rest_framework]:<http://www.django-rest-framework.org/>
