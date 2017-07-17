@@ -72,6 +72,7 @@ Anaconda is a distribution of software and libraries and uses *CONDA* (a package
 + To do migration for specific application `python manage.py makemigrations <appName>` afted add to projects "_INSTALLED_APPS_"
 + Execute migration `python manage.py sqlmigrate <appName> <version>`
 + Create user `python manage.py createsuperuser`
++ When model is changes and you manage *Persistence*, you need to do a new migration with `python manage.py makemigrations <project name>` and then use `python manage.py migrate`
 
 ##### [django rest_framework]
 
