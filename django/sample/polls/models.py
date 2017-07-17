@@ -1,4 +1,6 @@
+import datetime
 from django.db import models
+from django.utils import timezone
 # To support python 2: from django.utils.encoding import python_2_unicode_compatible and add @python_2_unicode_compatible before model declaration
 
 # Create your models here.
@@ -9,6 +11,10 @@ class Question(models.Model):
     # Override the to string method
     def __str__(self):
         return self.question_text
+
+    def was_published_recently(self):
+        now = timezone.now()
+        return now - datetime.timedelta(days=1) <= self.pub_date <= now
 
 class Choice(models.Model):
     question = models.ForeignKey(Question, on_delete=models.CASCADE)
