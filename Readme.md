@@ -67,7 +67,7 @@ Anaconda is a distribution of software and libraries and uses *CONDA* (a package
 + Install `conda install django` (ver 1.11 requires python 3.4 and up)
 + Check version `$ python -m django --version` or from python `>>> import django` and then `>>> print(django.get_version())`
 + project creation `django-admin startproject <project name>`
-+ To run develpment server, go to project directory and run `python manage.py runserver`
++ To run development server, go to project directory and run `python manage.py runserver`
 + To create an app for the project `python manage.py startapp <appName>`
 + To do migration for specific application `python manage.py makemigrations <appName>` afted add to projects "_INSTALLED_APPS_"
 + Execute migration `python manage.py sqlmigrate <appName> <version>`
@@ -76,6 +76,11 @@ Anaconda is a distribution of software and libraries and uses *CONDA* (a package
 + Run tests ins a project `python manage.py test <project name>`
 + See [django-admin and manage.py] documentation
 + Write modules as [python packages]
++ Read [Django installation] guide from documentation
++ Files like images, JavaScript, or CSS are considered as static files.
+  + Using `{% load static %}` will allows use a static file on Django but between static files the should refer each other in relative way
+  + References on static files within Django see [the static files howto], [the staticfiles reference], [Deploying static files]
++ finding django installation route `python -c "import django; print(django.__path__)"`
 
 ##### [Django rest_framework]
 
@@ -140,6 +145,10 @@ The executable will be generated on the ***script-name/dist*** folder of Pyinsta
 
 ### [PyCharm] by Jet Brains®
 
+### TODO
+
++ [How to build reusable apps with django]
+
 ### Useful links
 [Google python class] - free class for people with a little bit of programming experience who want to learn Python. in this repo are included the exercises of the course.
 
@@ -202,3 +211,8 @@ SOFTWARE.
    [selenium]:<http://www.seleniumhq.org/>
    [django-admin and manage.py]:<https://docs.djangoproject.com/en/1.11/ref/django-admin/>
    [python packages]:<https://docs.python.org/3/tutorial/modules.html#tut-packages>
+   [Django installation]:<https://docs.djangoproject.com/en/1.11/topics/install/#installing-development-version>
+   [the static files howto]: <https://docs.djangoproject.com/en/1.11/howto/static-files/>
+   [the staticfiles reference]: <https://docs.djangoproject.com/en/1.11/ref/contrib/staticfiles/>
+   [Deploying static files]: <https://docs.djangoproject.com/en/1.11/howto/static-files/deployment/>
+   [How to build reusable apps with django]: <https://docs.djangoproject.com/en/1.11/intro/reusable-apps/>
