@@ -62,7 +62,7 @@ Anaconda is a distribution of software and libraries and uses *CONDA* (a package
 + To upgrade conda `conda upgrade conda`
 + To upgrade all packages `conda upgrade --all`. This command upgrades the *conda* too
 
-#### [django]
+#### [Django]
 
 + Install `conda install django` (ver 1.11 requires python 3.4 and up)
 + Check version `$ python -m django --version` or from python `>>> import django` and then `>>> print(django.get_version())`
@@ -74,12 +74,20 @@ Anaconda is a distribution of software and libraries and uses *CONDA* (a package
 + Create user `python manage.py createsuperuser`
 + When model is changes and you manage *Persistence*, you need to do a new migration with `python manage.py makemigrations <project name>` and then use `python manage.py migrate`
 + Run tests ins a project `python manage.py test <project name>`
++ See [django-admin and manage.py] documentation
++ Write modules as [python packages]
 
-##### [django rest_framework]
+##### [Django rest_framework]
 
 + install `pip install djangorestframework`
 + install *httpie* `brew install httpie`
 + test REST api `http -a <user-name>:<password> http://<127.0.0.1 or localhost>:<port>/<endpoint>/`
+
+##### Django documentation about testing links
+
++ [Testing in Django]
++ [Testing with selenium] and [selenium] automation tool
++ [Test code Coverage]
 
 ### [The Jupyter Notebook]
 
@@ -186,5 +194,11 @@ SOFTWARE.
    [YAML]: <http://www.yaml.org/>
    [The Jupyter Notebook]: <http://jupyter.org/>
    [PyCharm]: <http://www.jetbrains.com/pycharm/?utm_source=learnpythonorg&utm_medium=Banner&utm_campaign=PyCharm>
-   [django]: <https://www.djangoproject.com/>
-   [django rest_framework]:<http://www.django-rest-framework.org/>
+   [Django]: <https://www.djangoproject.com/>
+   [Django rest_framework]:<http://www.django-rest-framework.org/>
+   [Testing with selenium]:<https://docs.djangoproject.com/en/1.11/topics/testing/tools/#django.test.LiveServerTestCase>
+   [Test code Coverage]:<https://docs.djangoproject.com/en/1.11/topics/testing/advanced/#topics-testing-code-coverage>
+   [Testing in Django]:<https://docs.djangoproject.com/en/1.11/topics/testing/>
+   [selenium]:<http://www.seleniumhq.org/>
+   [django-admin and manage.py]:<https://docs.djangoproject.com/en/1.11/ref/django-admin/>
+   [python packages]:<https://docs.python.org/3/tutorial/modules.html#tut-packages>
