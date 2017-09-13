@@ -8,11 +8,29 @@ This repository is a compilation of python exercises in the road of learning
 * [Atom Editor] - A hackable text editor for the 21st Century
 * [Fedora] - Linux redhat based operative system. version 25
 
-And some Atom plugins
+#### [PyCharm] by Jet Brains®
+
+#### Create an executable from a python script
+
+To create a standalone executable from a python script we use [Pyinstaller]
+
+in the Pyinstaller downloaded folder we need to run:
+
+```
+python pyinstaller.py <route to script> --windowed -F
+```
+
+Pyinstaller will create an executable for the current SO. In Linux to create a Windows executable we can use ***wine*** with python installed and run
+
+```
+wine python pyinstaller.py <route to script> --windowed -F
+```  
+
+The executable will be generated on the ***script-name/dist*** folder of Pyinstaller downloaded folder
 
 ### Installation
 
-Fedora already has python 2 and python 3 installed and you can se with the command
+Fedora already has python 2 and python 3 installed and you can see with the command
 
 + `ls /usr/bin/python*`
 
@@ -62,7 +80,7 @@ Anaconda is a distribution of software and libraries and uses *CONDA* (a package
 + To upgrade conda `conda upgrade conda`
 + To upgrade all packages `conda upgrade --all`. This command upgrades the *conda* too
 
-#### [Django]
+### [Django]: Web framework
 
 + Install `conda install django` (ver 1.11 requires python 3.4 and up)
 + Check version `$ python -m django --version` or from python `>>> import django` and then `>>> print(django.get_version())`
@@ -82,13 +100,13 @@ Anaconda is a distribution of software and libraries and uses *CONDA* (a package
   + References on static files within Django see [the static files howto], [the staticfiles reference], [Deploying static files]
 + finding django installation route `python -c "import django; print(django.__path__)"`
 
-##### [Django rest_framework]
+#### [Django rest_framework]: for RESTful API
 
 + install `pip install djangorestframework`
 + install *httpie* `brew install httpie`
 + test REST api `http -a <user-name>:<password> http://<127.0.0.1 or localhost>:<port>/<endpoint>/`
 
-##### Django documentation about testing links
+#### Django documentation about testing links
 
 + [Testing in Django]
 + [Testing with selenium] and [selenium] automation tool
@@ -96,23 +114,7 @@ Anaconda is a distribution of software and libraries and uses *CONDA* (a package
 
 ### [The Jupyter Notebook]
 
-### Create an executable from a python script
-
-To create a standalone executable from a python script we use [Pyinstaller]
-
-in the Pyinstaller downloaded folder we need to run:
-
-```
-python pyinstaller.py <route to script> --windowed -F
-```
-
-Pyinstaller will create an executable for the current SO. In Linux to create a Windows executable we can use ***wine*** with python installed and run
-
-```
-wine python pyinstaller.py <route to script> --windowed -F
-```  
-
-The executable will be generated on the ***script-name/dist*** folder of Pyinstaller downloaded folder
+### [Flask microservices]
 
 ### List of exercises
 
@@ -143,11 +145,10 @@ The executable will be generated on the ***script-name/dist*** folder of Pyinsta
 + *list2* - Basic list operations as list merge, list append and list pop and use of reversed() operation.
 + *wordcount* - using dictionary count the frequency of a word in a text.
 
-### [PyCharm] by Jet Brains®
-
 ### TODO
 
 + [How to build reusable apps with django]
++ Complete [The Jupyter Notebook], [PyCharm] and [Flask microservices] sections
 
 ### Useful links
 [Google python class] - free class for people with a little bit of programming experience who want to learn Python. in this repo are included the exercises of the course.
@@ -216,3 +217,4 @@ SOFTWARE.
    [the staticfiles reference]: <https://docs.djangoproject.com/en/1.11/ref/contrib/staticfiles/>
    [Deploying static files]: <https://docs.djangoproject.com/en/1.11/howto/static-files/deployment/>
    [How to build reusable apps with django]: <https://docs.djangoproject.com/en/1.11/intro/reusable-apps/>
+   [Flask microservices]:<http://flask.pocoo.org/>
