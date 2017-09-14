@@ -143,7 +143,21 @@ def reverseParentheses(s):
         elif char == ")":
             close_par_indexes.append(index)
 
-    for index in range ()
+    for closing_index in close_par_indexes:
+        while open_par_indexes[-1] > closing_index:
+            vassel = open_par_indexes[-1]
+            open_par_indexes[-1] = open_par_indexes[-2]
+            open_par_indexes[-2] = vassel
+
+        init_index = open_par_indexes.pop()
+
+        # To revert substrings
+        substring = s[init_index + 1: closing_index]
+        s = s[:init_index+1] + substring[::-1] + s[closing_index:]
+
+    # remove parentesis
+    s = s.replace('(','')
+    s = s.replace(')','')
 
     return s
 
@@ -226,7 +240,16 @@ def main():
     assert sortByHeight(a) == [-1, 150, 160, 170, -1, -1, 180, 190]
 
     s = "a(bc)de"
-    assert reverseParentheses(s) is "acbde"
+    assert reverseParentheses(s) == "acbde"
+
+    s = "a(bcdefghijkl(mno)p)q"
+    assert reverseParentheses(s) == "apmnolkjihgfedcbq"
+
+    s = "co(de(fight)s)"
+    assert reverseParentheses(s) == "cosfighted"
+
+    s = "abc(cba)ab(bac)c"
+    assert reverseParentheses(s) == "abcabcabcabc"
 
     print("All tests success!!")
 
